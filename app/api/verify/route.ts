@@ -130,8 +130,8 @@ async function compareImagesAdvanced(uploadedBuffer: Buffer, referenceBuffer: Bu
     const hammingDist = hammingDistance(uploadedHash, referenceHash)
     
     // Convert Hamming distance to similarity percentage (lower distance = higher similarity)
-    // Max distance for 256-bit hash is ~256, we use threshold of 10 for "similar"
-    const perceptualSimilarity = Math.max(0, 100 - (hammingDist / 10) * 100)
+    // Max distance for 256-bit hash is ~256, we use threshold of 20 for "similar"
+    const perceptualSimilarity = Math.max(0, 100 - (hammingDist / 20) * 100)
 
     // 3. Overall similarity (weighted average)
     const overallSimilarity = (

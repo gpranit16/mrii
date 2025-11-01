@@ -1,7 +1,7 @@
 // Application configuration
 export const config = {
   // Image comparison threshold (0-100)
-  similarityThreshold: Number(process.env.SIMILARITY_THRESHOLD) || 95,
+  similarityThreshold: Number(process.env.SIMILARITY_THRESHOLD) || 75,
   
   // Max file size in bytes (default 10MB)
   maxFileSize: (Number(process.env.MAX_FILE_SIZE_MB) || 10) * 1024 * 1024,
